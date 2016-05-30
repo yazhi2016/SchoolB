@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.xmzlb.schoolbaby.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/orange">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/id_process_btns_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/id_switch_camera_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="切换前后摄像头"/>
+
+        <Button
+            android:id="@+id/id_capture_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="拍照"/>
+    </LinearLayout>
+
+    <SurfaceView
+        android:id="@+id/id_area_sv"
+        android:layout_width="470px"
+        android:layout_height="640px"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="1065px"
+        android:text="拍照区域"/>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="22dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:textColor="@color/lucency">
+
+        <requestFocus/>
+    </EditText>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="760px"
+        android:layout_marginTop="1180px"
+        android:gravity="left"
+        android:text=" "
+        android:textColor="@color/black"
+        android:textSize="33sp"/>
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="760px"
+        android:layout_marginTop="1345px"
+        android:gravity="left"
+        android:text=" "
+        android:textColor="@color/black"
+        android:textSize="33sp"/>
+
+    <TextView
+        android:id="@+id/banji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="760px"
+        android:layout_marginTop="1495px"
+        android:gravity="left"
+        android:text=" "
+        android:textColor="@color/black"
+        android:textSize="33sp"/>
+
+    <RelativeLayout
+        android:id="@+id/progressbar"
+        android:layout_width="470px"
+        android:layout_height="640px"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="1065px"
+        android:background="@drawable/bg3"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:text="正在获取数据..."
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/imarela"
+        android:layout_width="470px"
+        android:layout_height="640px"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="1065px"
+        android:background="@drawable/bg3"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="470px"
+            android:layout_height="640px"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="1065px"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/bg3"
+            />
+
+        <ImageView
+            android:id="@+id/image22"
+            android:layout_width="470px"
+            android:layout_height="640px"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="1065px"/>
+
+    </RelativeLayout>
+</RelativeLayout>
